@@ -5,7 +5,7 @@
 
 describe("My First Test", function () {
   it("My First Test case", function () {
-    // test step gp here
+    // test step goes here
 
     cy.visit("https://rahulshettyacademy.com/seleniumPractise/#/"); // to open a website
     cy.get(".search-keyword").type("ca");
@@ -24,6 +24,10 @@ describe("My First Test", function () {
           // $el.find("button[type=button]").trigger("click"); // it also works
         }
       });
+
+    cy.get(".brand").then((logoElem) => {
+      cy.log(logoElem.text());
+    });
   });
 
   //   it("My Second Test case", function () {
